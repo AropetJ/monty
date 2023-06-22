@@ -16,7 +16,7 @@ void _pall(stack_t **top, __attribute__((unused))unsigned int count)
 
 	s = *top;
 	if (s == NULL)
-		return ();
+		return;
 	while (s)
 	{
 		printf("%d\n", s->n);

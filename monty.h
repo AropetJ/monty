@@ -6,7 +6,6 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <sys/types.h>
-#include <env.h>
 #include <string.h>
 #include <unistd.h>
 #include <ctype.h>
@@ -63,8 +62,10 @@ typedef struct share_var
 
 /** Variables **/
 extern share_v var;
+share_v var = {NULL, NULL, NULL, 0};
 
 /** Function definition **/
 void _pall(stack_t **top, __attribute__((unused))unsigned int count);
+void _push(stack_t **top, unsigned int i);
 
 #endif
