@@ -67,5 +67,6 @@ share_v var = {NULL, NULL, NULL, 0};
 /** Function definition **/
 void _pall(stack_t **top, __attribute__((unused))unsigned int count);
 void _push(stack_t **top, unsigned int i);
+void _pint(stack_t **top, unsigned int count);
 
 #endif

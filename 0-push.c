@@ -28,7 +28,7 @@ void _push(stack_t **top, unsigned int i)
 			fclose(var.file);
 			free(var.items);
 			free_stack(*top);
-			exit(1);
+			exit(EXIT_FAILURE);
 		}
 	}
 	else
@@ -37,7 +37,7 @@ void _push(stack_t **top, unsigned int i)
 		fclose(var.file);
 		free(var.items);
 		free_stack(*top);
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 	j = atoi(var.arg);
 	if (var.flag == 0)
