@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef MONTY_H
+#define MONTY_H
 
 /** Header files **/
 #include <stdio.h>
@@ -8,6 +8,9 @@
 #include <sys/types.h>
 #include <env.h>
 #include <string.h>
+#include <unistd.h>
+#include <ctype.h>
+#include <fcntl.h>
 
 /** Data structures **/
 /**
@@ -21,9 +24,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -36,14 +39,32 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/** Variables **/
+/**
+ * struct share_var - A struct that shares variables across files.
+ *
+ * @arg: Argument
+ * @file: A pointer to the monty file
+ * @items: line content
+ * @flag: Used to to identify a change from stack queue
+ * Description: Defines variables that we use across all our files
+ */
 
+typedef struct share_var
+{
+	char *arg;
+	FILE *file;
+	char *items;
+	int flag;
+} share_v;
+
+/** Variables **/
+extern share_v var;
 
 /** Function definition **/
-
+void _pall(stack_t **top, __attribute__((unused))unsigned int count);
 
 #endif
