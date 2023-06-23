@@ -1,5 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define _GNU_SOURCE
 
 /** Header files **/
 #include <stdio.h>
@@ -62,7 +63,6 @@ typedef struct share_var
 
 /** Variables **/
 extern share_v var;
-share_v var = {NULL, NULL, NULL, 0};
 
 /** Function definition **/
 void _pall(stack_t **top, __attribute__((unused))unsigned int count);
@@ -76,5 +76,7 @@ void free_stack(stack_t *top);
 void _add(stack_t **top, unsigned int count);
 void _nop(stack_t **top, unsigned int i);
 void _sub(stack_t **top, unsigned int count);
+void _queue(stack_t **top, unsigned int count);
+void addqueue(stack_t **top, int n);
 
 #endif

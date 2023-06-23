@@ -16,7 +16,7 @@ void _sub(stack_t **top, unsigned int count)
 	int node, i;
 
 	temp = *top;
-	for (node = 0; temp != NULL; nodes++)
+	for (node = 0; temp != NULL; node++)
 		temp = temp->next;
 	if (node < 2)
 	{

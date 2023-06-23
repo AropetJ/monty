@@ -3,11 +3,11 @@
 /**
  * addnode - Adds node to the top of the stack
  * @top: The top of the stack
- * @element: New item added to the stack
+ * @n: New item added to the stack
  * Return: No return value
  */
 
-void addnode(stack_t **top, int element)
+void addnode(stack_t **top, int n)
 {
 	stack_t *new_node, *temp;
 

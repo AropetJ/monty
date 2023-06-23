@@ -1,5 +1,5 @@
 #include "monty.h"
-
+share_v var = {NULL, NULL, NULL, 0};
 /**
 * main - Entry point
 *
