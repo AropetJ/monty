@@ -68,5 +68,13 @@ share_v var = {NULL, NULL, NULL, 0};
 void _pall(stack_t **top, __attribute__((unused))unsigned int count);
 void _push(stack_t **top, unsigned int i);
 void _pint(stack_t **top, unsigned int count);
+void _pop(stack_t **top, unsigned int count);
+void _swap(stack_t **top, unsigned int i);
+void addnode(stack_t **top, int element);
+int exec(char *items, stack_t **stack, unsigned int count, FILE *file);
+void free_stack(stack_t *top);
+void _add(stack_t **top, unsigned int count);
+void _nop(stack_t **top, unsigned int i);
+void _sub(stack_t **top, unsigned int count);
 
 #endif
